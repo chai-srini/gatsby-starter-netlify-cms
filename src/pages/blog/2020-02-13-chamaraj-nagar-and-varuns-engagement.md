@@ -33,8 +33,6 @@ tags:
 
 The week started with a trip to Chamaraj Nagar via Mysore. Varun, his girlfriend Angie and his parents spent the entire time in Mysore visiting the palace, museum, hydro plant and other attractions.
 
-![Dinner with Preethi, Prasad and their families](/img/IMG_20200203_224630.jpg "Me, Preethi, Sindhu, Rishi, Mum, Dad, Ram, Prasad, Dheeksha")
-
 The first evening we spent with Preethi, Prasad, and their families. I had not spent much time with their families in the past, so it was a real treat. I was most pleased with Prasad's daughter Dheeksha - who is serious about Tennis. Not surprisingly, her favorite player is Rafa. And surprisingly, she does not watch much of women's tennis. Preethi's son, Rishi, is perhaps the tallest person in our entire clan. I can see why he stopped pursuing cycling as a sport. He still follows the sport via Redbull Youtube channel.
 
 Mum, dad and I did a day trip to Chamaraj Nagar.
