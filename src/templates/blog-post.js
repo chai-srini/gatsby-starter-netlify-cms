@@ -31,7 +31,7 @@ export const BlogPostTemplate = ({
             <p>{description}</p>
             <div className={containerStyles.gridRow}>
               <div className={containerStyles.gridColumn}>
-                {photos.blurbs.map((photo, index) => {
+                {photos != null && photos.blurbs.map((photo, index) => {
                   if (index % 2 === 0) {
                     return (
                       <Img
@@ -45,7 +45,7 @@ export const BlogPostTemplate = ({
                 })}
               </div>
               <div className={containerStyles.gridColumn}>
-                {photos.blurbs.map((photo, index) => {
+                {photos != null && photos.blurbs.map((photo, index) => {
                   if (index % 2 === 1) {
                     return (
                       <Img
