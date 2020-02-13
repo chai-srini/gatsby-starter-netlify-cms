@@ -8,6 +8,14 @@ description: |-
   Varun's Engagement
 featuredpost: true
 featuredimage: /img/00100lrPORTRAIT_00100_BURST20200204111355867_COVER.jpg
+photos:
+  blurbs:
+    - image: /img/IMG_20200203_224630.jpg
+      text: >-
+        Dinner with Preethi, Prasad and their families. Me, Preethi, Sindhu,
+        Rishi, Mum, Dad, Ram, Prasad, Dheeksha.
+    - image: /img/00100lrPORTRAIT_00100_BURST20200204111355867_COVER.jpg
+      text: Faces with character
 tags:
   - ChamarajNagar
   - Varun
