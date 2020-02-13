@@ -22,6 +22,20 @@ photos:
       text: En Route from Mysore to Chamaraj Nagar
     - image: /img/IMG_20200204_111344.jpg
       text: Faces with Character
+    - image: /img/IMG_20200204_153043.jpg
+      text: Chamaraj Nagar Family
+    - image: /img/IMG_20200205_080405.jpg
+      text: Chamundi Hill steps
+    - image: /img/IMG_20200205_082751.jpg
+      text: Chamundi Hill Nandi
+    - image: /img/IMG_20200205_085043.jpg
+      text: Temple on top of Chamundi Hill
+    - image: /img/IMG_20200204_114114.jpg
+      text: Goat crossing
+    - image: /img/IMG_20200205_134617.jpg
+      text: Stretching the rules
+    - image: /img/IMG_20200207_112332.jpg
+      text: Old trees of Bangalore (Bangalore Club)
 tags:
   - ChamarajNagar
   - Varun
