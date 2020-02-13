@@ -29,6 +29,36 @@ export const BlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+            <div className={containerStyles.gridRow}>
+              <div className={containerStyles.gridColumn}>
+                {photos.blurbs.map((photo, index) => {
+                  if (index % 2 === 0) {
+                    return (
+                      <Img
+                        key={photo.image.id}
+                        style={{ width: `100%` }}
+                        fluid={photo.image.childImageSharp.fluid}
+                      />
+                    );
+                  }
+                  return null
+                })}
+              </div>
+              <div className={containerStyles.gridColumn}>
+                {photos.blurbs.map((photo, index) => {
+                  if (index % 2 === 1) {
+                    return (
+                      <Img
+                        key={photo.image.id}
+                        style={{ width: `100%` }}
+                        fluid={photo.image.childImageSharp.fluid}
+                      />
+                    );
+                  }
+                  return null
+                })}
+              </div>
+            </div>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
