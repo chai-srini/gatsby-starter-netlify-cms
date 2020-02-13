@@ -16,6 +16,12 @@ photos:
         Rishi, Mum, Dad, Ram, Prasad, Dheeksha.
     - image: /img/00100lrPORTRAIT_00100_BURST20200204111355867_COVER.jpg
       text: Faces with character
+    - image: /img/IMG_20200202_224707.jpg
+      text: Pump House
+    - image: /img/IMG_20200204_113546.jpg
+      text: En Route from Mysore to Chamaraj Nagar
+    - image: /img/IMG_20200204_111344.jpg
+      text: Faces with Character
 tags:
   - ChamarajNagar
   - Varun
