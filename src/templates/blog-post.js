@@ -1,24 +1,27 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { kebabCase } from "lodash";
+import Helmet from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
+import Img from "gatsby-image";
+import containerStyles from "./blog-post.module.css";
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
+  photos,
   tags,
   title,
-  helmet,
+  helmet
 }) => {
-  const PostContent = contentComponent || Content
-
+  const PostContent = contentComponent || Content;
+  console.log(photos);
   return (
     <section className="section">
-      {helmet || ''}
+      {helmet || ""}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -26,6 +29,34 @@ export const BlogPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+            <div className={containerStyles.gridRow}>
+              <div className={containerStyles.gridColumn}>
+                {photos.blurbs.map((photo, index) => {
+                  if (index % 2 == 0) {
+                    return (
+                      <Img
+                        key={photo.image.id}
+                        style={{ width: `100%` }}
+                        fluid={photo.image.childImageSharp.fluid}
+                      />
+                    );
+                  }
+                })}
+              </div>
+              <div className={containerStyles.gridColumn}>
+                {photos.blurbs.map((photo, index) => {
+                  if (index % 2 == 1) {
+                    return (
+                      <Img
+                        key={photo.image.id}
+                        style={{ width: `100%` }}
+                        fluid={photo.image.childImageSharp.fluid}
+                      />
+                    );
+                  }
+                })}
+              </div>
+            </div>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -43,19 +74,20 @@ export const BlogPostTemplate = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
+  photos: PropTypes.object,
   title: PropTypes.string,
-  helmet: PropTypes.object,
-}
+  helmet: PropTypes.object
+};
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
@@ -63,6 +95,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        photos={post.frontmatter.photos}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -76,16 +109,16 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  )
-}
+  );
+};
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
+    markdownRemark: PropTypes.object
+  })
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -97,7 +130,21 @@ export const pageQuery = graphql`
         title
         description
         tags
+        photos {
+          blurbs {
+            text
+            image {
+              id
+              relativePath
+              childImageSharp {
+                fluid(maxWidth: 480, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
-`
+`;
