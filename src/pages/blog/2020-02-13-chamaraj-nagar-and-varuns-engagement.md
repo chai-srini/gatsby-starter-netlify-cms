@@ -9,7 +9,9 @@ description: |-
 featuredpost: true
 featuredimage: /img/00100lrPORTRAIT_00100_BURST20200204111355867_COVER.jpg
 tags:
-  - ChamarajNagar Varun Ege
+  - ChamarajNagar
+  - Varun
+  - Ege
 ---
 ### Pump House
 
